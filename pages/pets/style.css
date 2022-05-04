@@ -1,0 +1,92 @@
+/* pets section */
+.pets {
+  margin-top: 6rem;
+  padding-top: 4rem;
+  background-color: var(--color-light-l);
+}
+.pets__content {
+  margin-top: 2.9rem;
+}
+.pets__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.3rem 2rem;
+}
+.pets__title {
+  text-align: center;
+}
+.pet-card {
+  margin: 0 auto;
+  width: 13.5rem;
+}
+.pets__pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.pets__pagination .btn {
+  font: 1rem/115% "Georgia";
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  z-index: 1;
+}
+.pets__pagination span.btn {
+  cursor: default;
+}
+.pets__pagination .btn-arrow,
+.pets__pagination .btn-double-arrow {
+  background-position: center top 13px;
+  background-repeat: no-repeat;
+}
+.pets__pagination .btn-arrow {
+  background-image: url(../../assets/icons/quot.svg);
+
+  background-size: 13px 23px;
+}
+.pets__pagination .btn-double-arrow {
+  background-image: url(../../assets/icons/double-quot.svg);
+  background-size: 27px 23px;
+}
+.pets__pagination .btn-first,
+.pets__pagination .btn-prev {
+  transform: rotate(180deg);
+}
+.pets__pagination .btn-inactive {
+  border-color: black;
+  opacity: 0.3;
+}
+@media only screen and (max-width: 1279px) {
+  .pets {
+    padding-bottom: 3.8rem;
+  }
+  .pets__cards {
+    grid-template-columns: repeat(2, 13.5rem);
+    justify-content: center;
+  }
+  .pets__content {
+    margin-top: 1.5rem;
+  }
+
+  .pets__pagination {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pets__cards {
+    grid-template-columns: 13.5rem;
+    gap: 1.4rem 2.1rem;
+  }
+  .pets {
+    padding-top: 2rem;
+    padding-bottom: 2.1rem;
+  }
+  .pets__content {
+    margin-top: 2.1rem;
+  }
+  .pets__pagination {
+    gap: 0.5rem;
+  }
+}
